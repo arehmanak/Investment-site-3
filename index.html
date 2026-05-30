@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethical Investing in India for NRIs in UAE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-deep:    #080d16;
+      --bg-card:    #0e1624;
+      --bg-card-2:  #131d2e;
+      --gold:       #c9a84c;
+      --gold-light: #e2c87a;
+      --green:      #1a7a4a;
+      --green-light:#22a363;
+      --text-main:  #eae6da;
+      --text-muted: #8a9bb4;
+      --border:     rgba(201,168,76,0.18);
+      --border-soft:rgba(255,255,255,0.07);
+      --radius:     10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── NAV ─────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,13,22,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+      gap: 16px;
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0;
+      list-style: none;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    .nav-links a {
+      display: block;
+      padding: 18px 12px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ────────────────────────────── */
+    .hero {
+      padding: 88px 5% 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 85% 85%, rgba(26,122,74,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* geometric halftone pattern, very subtle */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(201,168,76,0.06) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 80%);
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      background: rgba(26,122,74,0.15);
+      border: 1px solid rgba(26,122,74,0.3);
+      padding: 5px 16px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.1rem, 5.5vw, 3.8rem);
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.18;
+      max-width: 820px;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      max-width: 640px;
+      margin: 0 auto 38px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background: var(--bg-card);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── SECTION WRAPPER ─────────────────── */
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 56px 5%;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .section > p {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      max-width: 700px;
+      margin-bottom: 32px;
+    }
+
+    /* ── OVERVIEW BULLETS ────────────────── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .overview-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: border-color 0.25s;
+    }
+    .overview-card:hover { border-color: var(--border); }
+
+    .overview-card .ov-icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .overview-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .overview-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── CATEGORY HEADER ─────────────────── */
+    .cat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .cat-title-group { display: flex; flex-direction: column; gap: 4px; }
+
+    .cat-num {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .cat-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    .cat-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin-bottom: 18px;
+    }
+
+    .learn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 7px 14px;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: background 0.2s, border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .learn-link:hover {
+      background: rgba(201,168,76,0.08);
+      border-color: var(--gold);
+    }
+
+    /* ── PRODUCT GRID ────────────────────── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .product-card {
+      background: var(--bg-card-2);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      transition: border-color 0.25s, transform 0.2s;
+    }
+    .product-card:hover {
+      border-color: rgba(201,168,76,0.22);
+      transform: translateY(-2px);
+    }
+
+    .product-card .p-icon {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .product-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .product-card p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .product-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .tag-tool    { background: rgba(26,122,74,0.15); color: var(--green-light); border: 1px solid rgba(26,122,74,0.25); }
+    .tag-fund    { background: rgba(201,168,76,0.1); color: var(--gold); border: 1px solid rgba(201,168,76,0.2); }
+    .tag-index   { background: rgba(59,130,246,0.1); color: #93c5fd; border: 1px solid rgba(59,130,246,0.2); }
+    .tag-alt     { background: rgba(168,85,247,0.1); color: #c4b5fd; border: 1px solid rgba(168,85,247,0.2); }
+    .tag-gateway { background: rgba(249,115,22,0.1); color: #fdba74; border: 1px solid rgba(249,115,22,0.2); }
+
+    /* ── SEPARATOR BETWEEN CATEGORIES ───── */
+    .cat-block {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .cat-block:last-child { border-bottom: none; }
+
+    /* ── PLATFORM CARDS ──────────────────── */
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .platform-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: border-color 0.25s;
+    }
+    .platform-card:hover { border-color: var(--border); }
+
+    .platform-icon {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .platform-body h3 {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 5px;
+    }
+
+    .platform-body p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── SHARIAH STEPS ───────────────────── */
+    .shariah-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 24px;
+    }
+
+    .shariah-step {
+      display: flex;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .shariah-step:last-child { border-bottom: none; }
+
+    .shariah-dot {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    .shariah-step h3 {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .shariah-step p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ── RISKS ───────────────────────────── */
+    .risks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .risk-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      border-left: 3px solid rgba(201,168,76,0.35);
+    }
+
+    .risk-card h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .risk-card p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── APPROACH ────────────────────────── */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .approach-card {
+      background: var(--bg-card-2);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+    .approach-card:hover { border-color: var(--border); }
+
+    .approach-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+    .approach-card.beginner::before     { background: var(--green-light); }
+    .approach-card.intermediate::before { background: var(--gold); }
+    .approach-card.advanced::before     { background: #f87171; }
+
+    .approach-level {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .approach-card.beginner     .approach-level { color: var(--green-light); }
+    .approach-card.intermediate .approach-level { color: var(--gold); }
+    .approach-card.advanced     .approach-level { color: #f87171; }
+
+    .approach-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .approach-card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── PORTFOLIO ALLOCATION ────────────── */
+    .alloc-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 28px;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .alloc-wrapper { grid-template-columns: 1fr; }
+    }
+
+    .alloc-bars { display: flex; flex-direction: column; gap: 14px; }
+
+    .alloc-row { display: flex; flex-direction: column; gap: 6px; }
+
+    .alloc-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .alloc-label span:first-child { color: var(--text-main); }
+    .alloc-label span:last-child  { color: var(--text-muted); }
+
+    .bar-track {
+      height: 8px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1s ease;
+    }
+
+    /* donut chart */
+    .donut-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .donut-wrap svg { overflow: visible; }
+
+    .donut-label {
+      text-align: center;
+    }
+
+    .donut-label p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .alloc-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── DISCLAIMER ──────────────────────── */
+    .disclaimer {
+      max-width: 960px;
+      margin: 0 auto 16px;
+      padding: 16px 5%;
+    }
+
+    .disclaimer-box {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      font-size: 0.79rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .disclaimer-box strong {
+      color: var(--gold);
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.73rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── FOOTER ──────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 26px 5%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    footer p { font-size: 0.78rem; color: var(--text-muted); }
+
+    footer a {
+      font-size: 0.78rem;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ──────────────────────── */
+    @media (max-width: 600px) {
+      nav { padding: 0 4%; }
+      .hero { padding: 56px 4% 48px; }
+      .section { padding: 40px 4%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-brand">Ethical Investing · India</a>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#stocks">Stocks</a></li>
+      <li><a href="#funds">Funds</a></li>
+      <li><a href="#alternatives">Alternatives</a></li>
+      <li><a href="#platforms">Platforms</a></li>
+      <li><a href="#risks">Risks</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">UAE &amp; Gulf · NRI Investors</div>
+    <h1>Ethical Investing in India — <em>Shariah-Conscious.</em> Simple. Structured.</h1>
+    <p class="hero-sub">
+      Built for UAE-based ethical investors who want clear, structured access to Indian market
+      opportunities through Shariah-conscious products, platforms, and investment routes.
+    </p>
+    <div class="pill-row">
+      <span class="pill">🇮🇳 Large Listed Universe</span>
+      <span class="pill">☪️ Improving Halal Ecosystem</span>
+      <span class="pill">💱 INR Currency Exposure</span>
+      <span class="pill">🏙️ GIFT City Access Route</span>
+    </div>
+  </div>
+
+  <!-- SECTION 1: MARKET OVERVIEW -->
+  <div class="section" id="overview">
+    <div class="section-label">Section 01 · Market Overview</div>
+    <h2>India as an Investment Destination</h2>
+    <p>
+      India offers a deep and growing listed market with improving Shariah screening tools,
+      strong long-term growth drivers, and multiple access routes for UAE-based investors.
+    </p>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="ov-icon">📊</div>
+        <h3>Large Listed Universe</h3>
+        <p>Thousands of companies across sectors and market caps listed on NSE and BSE, with growing Shariah-screened subsets.</p>
+      </div>
+      <div class="overview-card">
+        <div class="ov-icon">👥</div>
+        <h3>Deep Market Participation</h3>
+        <p>Strong retail and institutional investor base, providing liquidity and price discovery across a wide range of stocks.</p>
+      </div>
+      <div class="overview-card">
+        <div class="ov-icon">☪️</div>
+        <h3>Improving Halal Ecosystem</h3>
+        <p>Growing availability of Shariah screening tools, ethical funds, and structured products designed for Muslim investors.</p>
+      </div>
+      <div class="overview-card">
+        <div class="ov-icon">🏙️</div>
+        <h3>GIFT City Access Route</h3>
+        <p>An international financial hub enabling UAE-based investors to access India through USD-denominated, tax-efficient structures.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: INVESTMENT OPTIONS -->
+  <div class="section" id="stocks">
+    <div class="section-label">Section 02 · Investment Options</div>
+    <h2>What Can You Invest In?</h2>
+    <p>
+      Browse products by category, understand what each does in one line, and follow the
+      detail page links to go deeper. All products here are reviewed for Shariah suitability.
+    </p>
+
+    <!-- 2.1 DIRECT STOCKS -->
+    <div class="cat-block">
+      <div class="cat-header">
+        <div class="cat-title-group">
+          <span class="cat-num">2.1</span>
+          <span class="cat-title">Indian Equities — Direct Stocks</span>
+        </div>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+      <p class="cat-desc">
+        Direct ownership of shares in Indian companies for long-term capital appreciation.
+        Invest in listed companies on NSE and BSE — Shariah screening is required before investing.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-tag tag-tool">Screening Tool</span>
+          <div class="p-icon">🔍</div>
+          <h4>Islamicly</h4>
+          <p>Shariah stock screening platform used to check whether Indian stocks pass Islamic compliance filters.</p>
+        </div>
+        <div class="product-card">
+          <span class="product-tag tag-tool">Screening Tool</span>
+          <div class="p-icon">📱</div>
+          <h4>Zoya</h4>
+          <p>Stock screening app that helps investors review business activity, debt ratios, and compliance status in detail.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.2 MUTUAL FUNDS -->
+    <div class="cat-block" id="funds">
+      <div class="cat-header">
+        <div class="cat-title-group">
+          <span class="cat-num">2.2</span>
+          <span class="cat-title">Mutual Funds — Shariah-Compliant</span>
+        </div>
+        <a href="mutual-funds.html" class="learn-link">Explore Funds →</a>
+      </div>
+      <p class="cat-desc">
+        Professionally managed portfolios that invest only in screened Shariah-compliant Indian stocks.
+        Ideal for investors who want ethical exposure without picking individual stocks.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-tag tag-fund">Active Fund</span>
+          <div class="p-icon">🏦</div>
+          <h4>Tata Ethical Fund</h4>
+          <p>An actively managed ethical equity fund with a 30-year track record, focused on screened Indian companies.</p>
+        </div>
+        <div class="product-card">
+          <span class="product-tag tag-fund">Active Fund</span>
+          <div class="p-icon">⚛️</div>
+          <h4>Quantum Ethical Fund</h4>
+          <p>An ethical fund offering diversified exposure to compliant Indian equities via a low-cost, direct model.</p>
+        </div>
+        <div class="product-card">
+          <span class="product-tag tag-fund">Active Fund</span>
+          <div class="p-icon">🏛️</div>
+          <h4>Taurus Ethical Fund</h4>
+          <p>A Shariah-oriented mutual fund for investors seeking professionally managed equity exposure.</p>
+        </div>
+        <div class="product-card">
+          <span class="product-tag tag-index">Index Fund</span>
+          <div class="p-icon">📊</div>
+          <h4>UTI NIFTY 500 Shariah Index Fund</h4>
+          <p>An index-based fund passively tracking a screened Shariah-compliant equity universe at low cost.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.3 ETFs -->
+    <div class="cat-block">
+      <div class="cat-header">
+        <div class="cat-title-group">
+          <span class="cat-num">2.3</span>
+          <span class="cat-title">ETFs — Exchange-Traded Funds</span>
+        </div>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+      <p class="cat-desc">
+        Exchange-listed funds offering diversified exposure with the flexibility of buying and selling during market hours — like a stock.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-tag tag-fund">ETF</span>
+          <div class="p-icon">🥇</div>
+          <h4>Gold ETFs</h4>
+          <p>Funds giving gold exposure through exchange trading, subject to structure and physical backing review for compliance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.4 SMALLCASES -->
+    <div class="cat-block">
+      <div class="cat-header">
+        <div class="cat-title-group">
+          <span class="cat-num">2.4</span>
+          <span class="cat-title">Smallcases — Curated Portfolios</span>
+        </div>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+      <p class="cat-desc">
+        Pre-built baskets of stocks grouped around a theme, strategy, or investment framework — managed like a ready portfolio.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-tag tag-tool">Smallcase</span>
+          <div class="p-icon">🌱</div>
+          <h4>Green Portfolio Smallcase</h4>
+          <p>A theme-based basket focused on sustainability-linked companies with screened stock selection.</p>
+        </div>
+        <div class="product-card">
+          <span class="product-tag tag-fund">Smallcase</span>
+          <div class="p-icon">🌙</div>
+          <h4>Zamzam Smallcase</h4>
+          <p>A curated portfolio aimed at investors seeking a more Shariah-conscious direct stock basket.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.5 FIXED INCOME -->
+    <div class="cat-block">
+      <div class="cat-header">
+        <div class="cat-title-group">
+          <span class="cat-num">2.5</span>
+          <span class="cat-title">Fixed Income Alternatives</span>
+        </div>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+      <p class="cat-desc">
+        Income-oriented instruments that may offer more predictable returns — but require careful structure-level Shariah review before investing.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-tag tag-alt">NCD</span>
+          <div class="p-icon">📝</div>
+          <h4>Rehbar Financial Services – NCDs</h4>
+          <p>A route to explore structured income products. Compliance depends on the underlying issuance format — review carefully.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.6 ALTERNATIVES -->
+    <div class="cat-block" id="alternatives">
+      <div class="cat-header">
+        <div class="cat-title-group">
+          <span class="cat-num">2.6</span>
+          <span class="cat-title">Alternative Investments</span>
+        </div>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+      <p class="cat-desc">
+        Non-traditional investments that diversify a portfolio beyond listed stocks and mutual funds — including real estate-linked options.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-tag tag-alt">Real Estate</span>
+          <div class="p-icon">🏘️</div>
+          <h4>Assetify</h4>
+          <p>A platform offering fractional real estate-style exposure for investors looking beyond equities.</p>
+        </div>
+        <div class="product-card">
+          <span class="product-tag tag-alt">Platform</span>
+          <div class="p-icon">⛰️</div>
+          <h4>Mount Judi</h4>
+          <p>An ethical investment platform positioned around Shariah-conscious investment opportunities in India.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2.7 GIFT CITY -->
+    <div class="cat-block">
+      <div class="cat-header">
+        <div class="cat-title-group">
+          <span class="cat-num">2.7</span>
+          <span class="cat-title">International Gateway — GIFT City</span>
+        </div>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+      <p class="cat-desc">
+        A financial hub designed to give global investors easier access to India through international market structures.
+        Useful for investors seeking USD-oriented access, tax efficiency, and a more international investment framework.
+      </p>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-tag tag-gateway">GIFT City</span>
+          <div class="p-icon">🏙️</div>
+          <h4>GIFT City — IFSC</h4>
+          <p>India's International Financial Services Centre, offering NRIs a regulated, USD-based route into Indian markets with simplified compliance.</p>
+        </div>
+        <div class="product-card">
+          <span class="product-tag tag-gateway">Tax</span>
+          <div class="p-icon">💰</div>
+          <h4>Tax Efficiency</h4>
+          <p>GIFT City structures may offer favourable tax treatment for international investors compared to direct domestic investment routes.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /section investments -->
+
+  <!-- SECTION 3: PLATFORMS -->
+  <div class="section" id="platforms">
+    <div class="section-label">Section 03 · Platforms to Invest</div>
+    <h2>How to Access Indian Markets from the Gulf</h2>
+    <p>
+      Different access routes help UAE investors invest in India depending on account type,
+      regulations, and preferred currency. Choose the route that fits your situation.
+    </p>
+    <div class="platform-grid">
+      <div class="platform-card">
+        <div class="platform-icon">🌐</div>
+        <div class="platform-body">
+          <h3>International Brokers</h3>
+          <p>Brokers with global reach that provide access to Indian markets — typically through Indian subsidiary accounts or through GIFT City structures.</p>
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">🇮🇳</div>
+        <div class="platform-body">
+          <h3>Indian Brokerage Accounts</h3>
+          <p>NRIs with NRE/NRO accounts can open Indian brokerage accounts on platforms like Groww, Zerodha, or directly via AMC websites.</p>
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">🏙️</div>
+        <div class="platform-body">
+          <h3>GIFT City Platforms</h3>
+          <p>Platforms operating within GIFT City's IFSC allow USD-based investment into India with a more internationally familiar regulatory framework.</p>
+        </div>
+      </div>
+      <div class="platform-card">
+        <div class="platform-icon">📲</div>
+        <div class="platform-body">
+          <h3>Direct AMC Portals</h3>
+          <p>Invest directly on fund house websites like tatamutualfund.com or quantumamc.com — no broker needed, and NRI KYC can often be done online.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: SHARIAH COMPLIANCE -->
+  <div class="section" id="compliance">
+    <div class="section-label">Section 04 · Shariah Compliance Framework</div>
+    <h2>How Shariah Screening Works</h2>
+    <p>
+      A screening framework helps investors avoid prohibited sectors and filter out financially
+      non-compliant companies. Here is a simplified overview of how stocks and funds are evaluated.
+    </p>
+    <div class="shariah-steps">
+      <div class="shariah-step">
+        <div class="shariah-dot">🚫</div>
+        <div>
+          <h3>Business Activity Filter</h3>
+          <p>Review the company's core business and avoid prohibited industries — including alcohol, tobacco, pork, gambling, conventional banking, insurance, and weapons.</p>
+        </div>
+      </div>
+      <div class="shariah-step">
+        <div class="shariah-dot">📉</div>
+        <div>
+          <h3>Debt Ratio Filter</h3>
+          <p>Check debt and interest-related financial ratios. Companies with interest-bearing debt exceeding 25–33% of total assets are typically excluded.</p>
+        </div>
+      </div>
+      <div class="shariah-step">
+        <div class="shariah-dot">🔍</div>
+        <div>
+          <h3>Use Screening Tools</h3>
+          <p>Use tools like <strong style="color:var(--text-main)">Islamicly</strong> and <strong style="color:var(--text-main)">Zoya</strong> for initial screening of individual stocks. These apps provide compliance ratings and detailed breakdowns.</p>
+        </div>
+      </div>
+      <div class="shariah-step">
+        <div class="shariah-dot">👁️</div>
+        <div>
+          <h3>Manual Review for Edge Cases</h3>
+          <p>Apply manual review for borderline names or sectors. Some companies may pass automated screens but require deeper review of their actual operations.</p>
+        </div>
+      </div>
+      <div class="shariah-step">
+        <div class="shariah-dot">♻️</div>
+        <div>
+          <h3>Ongoing Monitoring &amp; Purification</h3>
+          <p>Compliance is not a one-time check. Regularly review holdings as companies change. For any incidental impure income, donate the equivalent fraction to charity (purification).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: RISKS -->
+  <div class="section" id="risks">
+    <div class="section-label">Section 05 · Risks</div>
+    <h2>Understanding the Key Risks</h2>
+    <p>
+      Every investment carries risk. Understanding these upfront helps you invest with discipline,
+      realistic return expectations, and the right time horizon.
+    </p>
+    <div class="risks-grid">
+      <div class="risk-card">
+        <h3>📉 Market Volatility</h3>
+        <p>Equity markets fluctuate — especially mid-cap and small-cap stocks. Short-term drawdowns of 20–30% are normal. A long investment horizon (5+ years) is essential.</p>
+      </div>
+      <div class="risk-card">
+        <h3>💱 Currency Risk</h3>
+        <p>Your returns are in INR but your expenses are in AED or USD. Rupee depreciation reduces effective returns when converting back. This works in your favour if INR strengthens.</p>
+      </div>
+      <div class="risk-card">
+        <h3>⚖️ Regulatory Risk</h3>
+        <p>Changes in Indian or UAE regulations affecting foreign investor access, tax treaties, or repatriation rules can impact your investment strategy.</p>
+      </div>
+      <div class="risk-card">
+        <h3>💧 Liquidity Risk</h3>
+        <p>Smaller or less-traded securities may be difficult to exit quickly at fair prices. Stick to liquid funds and well-traded stocks unless you have expert guidance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: APPROACH -->
+  <div class="section" id="approach">
+    <div class="section-label">Section 06 · Suggested Approach</div>
+    <h2>Where to Start — Based on Your Experience Level</h2>
+    <p>
+      The right starting point depends on your experience, how much time you can give to monitoring,
+      and your comfort with risk. Start simple and build complexity gradually.
+    </p>
+    <div class="approach-grid">
+      <div class="approach-card beginner">
+        <div class="approach-level">🌱 Beginner</div>
+        <h3>Start with Ethical Mutual Funds</h3>
+        <p>
+          Begin with one or two Shariah-compliant mutual funds (such as Tata Ethical Fund or UTI Nifty 500 Shariah Index Fund).
+          Set up a monthly SIP, even a small one. Let the fund manager do the work while you learn.
+        </p>
+      </div>
+      <div class="approach-card intermediate">
+        <div class="approach-level">📈 Intermediate</div>
+        <h3>Combine Funds with Direct Stocks</h3>
+        <p>
+          Once comfortable, add a selective basket of screened direct equities to your portfolio.
+          Use Islamicly or Zoya to screen, and focus on quality large-cap names first.
+        </p>
+      </div>
+      <div class="approach-card advanced">
+        <div class="approach-level">🚀 Advanced</div>
+        <h3>Build a Direct Portfolio with Alternatives</h3>
+        <p>
+          Build a comprehensive direct stock portfolio using your own research. Add smallcases or
+          ethical alternative investments where appropriate. Reassess allocation regularly.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7: PORTFOLIO ALLOCATION -->
+  <div class="section" id="portfolio">
+    <div class="section-label">Section 07 · Sample Portfolio Allocation</div>
+    <h2>Illustrative Portfolio — How to Combine the Pieces</h2>
+    <p>
+      This is an illustrative starting point, not a personal recommendation. The right mix
+      depends on your goals, risk tolerance, and time horizon. Revisit allocation every 12 months.
+    </p>
+
+    <div class="alloc-wrapper">
+      <div class="alloc-bars">
+        <div class="alloc-row">
+          <div class="alloc-label">
+            <span>Mutual Funds</span>
+            <span>40%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:40%;background:var(--gold);"></div>
+          </div>
+        </div>
+        <div class="alloc-row">
+          <div class="alloc-label">
+            <span>Direct Stocks</span>
+            <span>30%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:30%;background:var(--green-light);"></div>
+          </div>
+        </div>
+        <div class="alloc-row">
+          <div class="alloc-label">
+            <span>Gold ETF</span>
+            <span>15%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:15%;background:#f59e0b;"></div>
+          </div>
+        </div>
+        <div class="alloc-row">
+          <div class="alloc-label">
+            <span>Alternatives</span>
+            <span>15%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:15%;background:#a78bfa;"></div>
+          </div>
+        </div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:12px;line-height:1.6;">
+          ⚠️ Illustrative only. Not financial advice. Adjust based on your own goals and risk tolerance.
+        </p>
+      </div>
+
+      <!-- DONUT CHART -->
+      <div class="donut-wrap">
+        <svg viewBox="0 0 160 160" width="190" height="190">
+          <!-- Donut segments: total circumference of r=58 circle = 364.4 -->
+          <!-- 40% MF: 145.76 -->
+          <!-- 30% Stocks: 109.32 -->
+          <!-- 15% Gold: 54.66 -->
+          <!-- 15% Alt: 54.66 -->
+          <!-- offset starts at top (rotate -90deg) -->
+          <circle cx="80" cy="80" r="58" fill="none" stroke="#1a2336" stroke-width="22"/>
+          <!-- Mutual Funds 40% -->
+          <circle cx="80" cy="80" r="58" fill="none"
+            stroke="#c9a84c" stroke-width="22"
+            stroke-dasharray="145.76 218.64"
+            stroke-dashoffset="0"
+            transform="rotate(-90 80 80)"/>
+          <!-- Direct Stocks 30% -->
+          <circle cx="80" cy="80" r="58" fill="none"
+            stroke="#22a363" stroke-width="22"
+            stroke-dasharray="109.32 255.08"
+            stroke-dashoffset="-145.76"
+            transform="rotate(-90 80 80)"/>
+          <!-- Gold ETF 15% -->
+          <circle cx="80" cy="80" r="58" fill="none"
+            stroke="#f59e0b" stroke-width="22"
+            stroke-dasharray="54.66 309.74"
+            stroke-dashoffset="-255.08"
+            transform="rotate(-90 80 80)"/>
+          <!-- Alternatives 15% -->
+          <circle cx="80" cy="80" r="58" fill="none"
+            stroke="#a78bfa" stroke-width="22"
+            stroke-dasharray="54.66 309.74"
+            stroke-dashoffset="-309.74"
+            transform="rotate(-90 80 80)"/>
+          <!-- Centre text -->
+          <text x="80" y="75" text-anchor="middle"
+            font-family="Cormorant Garamond, serif"
+            font-size="22" font-weight="600" fill="#eae6da">100%</text>
+          <text x="80" y="93" text-anchor="middle"
+            font-family="Nunito, sans-serif"
+            font-size="8" fill="#8a9bb4" letter-spacing="1">ALLOCATED</text>
+        </svg>
+
+        <div class="alloc-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#c9a84c"></div>Mutual Funds 40%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#22a363"></div>Direct Stocks 30%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>Gold ETF 15%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div>Alternatives 15%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <div class="disclaimer-box">
+      <strong>⚠️ Disclaimer</strong>
+      This website is for educational and informational purposes only. It does not constitute
+      financial, legal, or Shariah advisory. Mutual fund and equity investments are subject to market
+      risks — please read all scheme-related documents carefully before investing. Past performance is
+      not indicative of future returns. NRI investors should consult a qualified financial advisor and
+      verify the latest tax and regulatory requirements applicable to their country of residence.
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Ethical Investing in India · Built for Gulf-based NRI Investors</p>
+    <a href="mutual-funds.html">Mutual Funds Deep-Dive →</a>
+  </footer>
+
+</body>
+</html>

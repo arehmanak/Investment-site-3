@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shariah-Compliant Mutual Funds | Ethical Investing in India for NRIs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-deep:    #080d16;
+      --bg-card:    #0e1624;
+      --bg-card-2:  #131d2e;
+      --gold:       #c9a84c;
+      --gold-light: #e2c87a;
+      --green:      #1a7a4a;
+      --green-light:#22a363;
+      --text-main:  #eae6da;
+      --text-muted: #8a9bb4;
+      --border:     rgba(201,168,76,0.18);
+      --border-soft:rgba(255,255,255,0.07);
+      --radius:     10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── NAV ─────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 13, 22, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0;
+      list-style: none;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    .nav-links a {
+      display: block;
+      padding: 18px 13px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
+
+    /* ── HERO ────────────────────────────── */
+    .hero {
+      padding: 80px 5% 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 0%, rgba(201,168,76,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(26,122,74,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { opacity: 0.5; }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      background: rgba(26,122,74,0.15);
+      border: 1px solid rgba(26,122,74,0.3);
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.2;
+      max-width: 780px;
+      margin: 0 auto 18px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      max-width: 600px;
+      margin: 0 auto 36px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background: var(--bg-card);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── SECTION WRAPPER ─────────────────── */
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 52px 5%;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+
+    .section p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 0.97rem;
+    }
+
+    /* ── BASICS GRID ─────────────────────── */
+    .basics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .basics-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+    .basics-card:hover { border-color: var(--border); }
+
+    .basics-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0.6;
+    }
+
+    .basics-icon {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .basics-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 7px;
+    }
+
+    .basics-card p {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ── STEPS ───────────────────────────── */
+    .steps {
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 28px;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .step:last-child { border-bottom: none; }
+
+    .step-num {
+      counter-increment: step;
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+    .step-num::before { content: counter(step); }
+
+    .step-body h3 {
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 5px;
+    }
+
+    .step-body p {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ── FUND CARDS SECTION ───────────────── */
+    .funds-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 52px 5%;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    /* ── TEF FEATURED CARD ───────────────── */
+    .tef-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 14px;
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 28px;
+      margin-bottom: 40px;
+    }
+
+    .tef-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--green));
+    }
+
+    .tef-badge {
+      display: inline-block;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.25);
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+
+    .tef-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .tef-card .tef-tagline {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .tef-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .tef-points li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.93rem;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .tef-points li .check {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(26,122,74,0.2);
+      border: 1px solid rgba(26,122,74,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+      font-size: 0.65rem;
+      color: var(--green-light);
+    }
+
+    .tef-points li strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .tef-points li span.note {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .tef-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      background: var(--gold);
+      color: #080d16;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold);
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.06);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      color: var(--text-muted);
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border-soft);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--text-main); border-color: var(--border); }
+
+    /* ── OTHER FUND CARDS ────────────────── */
+    .other-funds-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .fund-card {
+      background: var(--bg-card-2);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      transition: border-color 0.25s, transform 0.2s;
+    }
+    .fund-card:hover {
+      border-color: rgba(201,168,76,0.25);
+      transform: translateY(-2px);
+    }
+
+    .fund-card .fund-logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .fund-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .fund-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.25;
+    }
+
+    .fund-type-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green-light);
+    }
+
+    .fund-desc {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .fund-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .meta-chip {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      color: var(--text-muted);
+      border: 1px solid var(--border-soft);
+    }
+
+    .fund-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      margin-top: 4px;
+    }
+    .fund-link:hover { color: var(--gold-light); }
+    .fund-link svg { width: 13px; height: 13px; }
+
+    /* ── NRI HOW-TO ──────────────────────── */
+    .nri-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .nri-step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+    }
+
+    .nri-step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: rgba(201,168,76,0.25);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .nri-step-card h3 {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 7px;
+    }
+
+    .nri-step-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ── DISCLAIMER ──────────────────────── */
+    .disclaimer {
+      max-width: 900px;
+      margin: 0 auto 20px;
+      padding: 24px 5%;
+    }
+
+    .disclaimer-box {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .disclaimer-box strong {
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── FOOTER ──────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 28px 5%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      font-size: 0.78rem;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── DIVIDER ─────────────────────────── */
+    .divider {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+    .divider hr {
+      border: none;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    /* ── COMPARISON TABLE ────────────────── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      margin-top: 24px;
+    }
+    .compare-table th {
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 0.72rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.06);
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table td {
+      padding: 11px 14px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border-soft);
+      vertical-align: top;
+    }
+    .compare-table td:first-child {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .val-green { color: var(--green-light); }
+    .compare-table .val-gold  { color: var(--gold); }
+
+    /* ── RESPONSIVE ──────────────────────── */
+    @media (max-width: 600px) {
+      nav { padding: 0 4%; }
+      .nav-brand { font-size: 0.9rem; }
+      .hero { padding: 52px 4% 44px; }
+      .section, .funds-section, .disclaimer { padding: 40px 4%; }
+      .tef-card { padding: 24px 18px; }
+      .compare-table { font-size: 0.78rem; }
+      .compare-table th, .compare-table td { padding: 9px 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-brand">Ethical Investing · India</a>
+    <ul class="nav-links">
+      <li><a href="index.html#overview">Overview</a></li>
+      <li><a href="index.html#stocks">Stocks</a></li>
+      <li><a href="#" class="active">Funds</a></li>
+      <li><a href="index.html#alternatives">Alternatives</a></li>
+      <li><a href="index.html#platforms">Platforms</a></li>
+      <li><a href="index.html#risks">Risks</a></li>
+      <li><a href="index.html#approach">Approach</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Mutual Funds</span>
+    </div>
+    <div class="hero-eyebrow">Shariah-Compliant · India</div>
+    <h1>Invest the Right Way — <em>Ethical Mutual Funds</em> for Indian Investors in the Gulf</h1>
+    <p class="hero-sub">
+      A straightforward guide to understanding and investing in Shariah-compliant mutual funds in India —
+      built for NRIs based in the UAE, Saudi Arabia, Kuwait, Qatar, and across the Gulf region.
+    </p>
+    <div class="pill-row">
+      <span class="pill">✓ No Interest (Riba-Free)</span>
+      <span class="pill">✓ No Prohibited Sectors</span>
+      <span class="pill">✓ Professionally Managed</span>
+      <span class="pill">✓ SEBI Regulated</span>
+      <span class="pill">✓ Start with ₹100 / month</span>
+    </div>
+  </div>
+
+  <!-- SECTION 1: WHAT IS A MUTUAL FUND -->
+  <div class="section" id="basics">
+    <div class="section-label">Section 01 · Basics</div>
+    <h2>What is a Mutual Fund?</h2>
+    <p>
+      Think of a mutual fund as a shared pot of money. Thousands of investors pool their savings together,
+      and a professional fund manager invests that money in a basket of stocks on their behalf.
+      You don't need to pick individual companies — the fund manager does that work for you.
+    </p>
+    <p>
+      When those stocks grow in value, your share of the pot grows too. When you invest in a mutual fund,
+      you buy <strong style="color:var(--text-main)">units</strong> — small slices of the overall fund.
+      The price per unit is called the <strong style="color:var(--text-main)">NAV (Net Asset Value)</strong>,
+      and it changes every market day based on how the underlying stocks perform.
+    </p>
+
+    <div class="basics-grid">
+      <div class="basics-card">
+        <span class="basics-icon">🪣</span>
+        <h3>Pooled Money</h3>
+        <p>Many investors contribute small amounts. Together, this becomes a large corpus that can be invested in many companies at once.</p>
+      </div>
+      <div class="basics-card">
+        <span class="basics-icon">👨‍💼</span>
+        <h3>Professional Management</h3>
+        <p>A qualified fund manager and research team handle stock selection, portfolio monitoring and rebalancing — you don't need to do anything.</p>
+      </div>
+      <div class="basics-card">
+        <span class="basics-icon">📦</span>
+        <h3>Diversification</h3>
+        <p>Your money is spread across 30–80 companies. If one company falls, it doesn't hurt your overall investment heavily.</p>
+      </div>
+      <div class="basics-card">
+        <span class="basics-icon">💧</span>
+        <h3>Liquidity</h3>
+        <p>Unlike fixed deposits or property, most mutual funds let you withdraw your money any business day. There's no lock-in (unless it's an ELSS fund).</p>
+      </div>
+      <div class="basics-card">
+        <span class="basics-icon">📈</span>
+        <h3>SIP — Invest Small, Grow Big</h3>
+        <p>A Systematic Investment Plan (SIP) lets you invest a fixed amount every month — as low as ₹100 — automatically. Small amounts, compounded over years, build real wealth.</p>
+      </div>
+      <div class="basics-card">
+        <span class="basics-icon">🛡️</span>
+        <h3>SEBI Regulated</h3>
+        <p>All Indian mutual funds are regulated by SEBI (Securities & Exchange Board of India), providing investor protection and transparency.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: WHY SHARIAH COMPLIANT -->
+  <div class="section" id="why-shariah">
+    <div class="section-label">Section 02 · Shariah Compliance</div>
+    <h2>Why Choose a Shariah-Compliant Mutual Fund?</h2>
+    <p>
+      A conventional mutual fund may invest in banks, liquor companies, insurance firms, or other
+      industries that are impermissible under Islamic law. A Shariah-compliant fund applies a strict
+      filter — called a <strong style="color:var(--text-main)">Shariah screen</strong> — before selecting any stock.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Business Activity Filter</h3>
+          <p>Companies are excluded if they earn revenue from alcohol, tobacco, pork, gambling, adult entertainment, conventional banking, insurance, or weapons manufacturing.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Debt Ratio Filter (Riba)</h3>
+          <p>Companies with high levels of interest-bearing debt are excluded. Usually, interest-bearing debt must be less than 25–33% of total assets or market cap.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Revenue Purity Filter</h3>
+          <p>Even if a company mainly does permissible business, impure revenue (interest income, rental from prohibited businesses) must be a small fraction of total revenue.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Ongoing Shariah Advisory</h3>
+          <p>An independent Shariah Advisor or board reviews and updates the approved stock universe regularly. Stocks that fail compliance are removed from the portfolio.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h3>Purification</h3>
+          <p>If any minimal impure income does enter the fund (due to incidental interest), a small proportion of dividends may need to be donated to charity — a process known as purification.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: TATA ETHICAL FUND (FEATURED) -->
+  <div class="funds-section" id="tef">
+    <div class="section-label">Section 03 · Featured Fund</div>
+    <h2>Tata Ethical Fund (TEF)</h2>
+    <p style="color:var(--text-muted);font-size:0.97rem;margin-bottom:0;">India's most established Shariah-compliant equity mutual fund — nearly three decades of track record.</p>
+
+    <div class="tef-card">
+      <div class="tef-badge">⭐ Shariah-Certified · Est. 1996</div>
+      <h3>Tata Ethical Fund</h3>
+      <div class="tef-tagline">Open-Ended Equity Scheme · Tata Asset Management · Benchmark: NIFTY 500 Shariah TRI</div>
+
+      <ul class="tef-points">
+        <li>
+          <span class="check">✓</span>
+          <div>
+            <strong>One of India's oldest Shariah-compliant mutual funds</strong>, launched in 1996 — giving it a track record of nearly <strong>30 years</strong>. For investors who value institutional trust, this longevity matters deeply.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            Managed by <strong>Tata Asset Management</strong>, part of the iconic Tata Group — one of India's most respected and transparent conglomerates, with a 150-year legacy of ethical business conduct.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            The fund's objective is to deliver <strong>medium to long-term capital growth</strong> by investing in Shariah-compliant Indian equities — focusing on well-researched value and growth companies across sectors like technology, healthcare, and consumer goods.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            An <strong>independent Shariah Advisor</strong> reviews and maintains the approved stock universe. Stocks that fail compliance at any point are removed — you don't need to monitor compliance yourself.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            <strong>No market cap bias</strong> — the fund can hold large-cap, mid-cap, and small-cap stocks. This flexibility allows the manager to go where the best Shariah-compliant opportunities exist.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            Only invests in companies where <strong>interest-bearing debt is less than 25% of total assets</strong> — meaning the portfolio is naturally composed of financially strong, low-leverage businesses that generate their own cash.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            Strictly excludes all prohibited sectors: <strong>banking, finance, insurance, alcohol, tobacco, pork products, gambling, cinema/entertainment, and weapons</strong>. The Shariah screen is applied at both business activity and financial ratio levels.
+          </div>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <div>
+            <strong>Delivered approximately 15% CAGR since inception</strong>, benchmarked against NIFTY 500 Shariah TRI. Minimum SIP starts at just <strong>₹100/month</strong>; lumpsum from ₹5,000 — highly accessible for Gulf-based investors starting small.
+          </div>
+        </li>
+      </ul>
+
+      <div class="tef-links">
+        <a href="https://ethical.tatamutualfund.com/" target="_blank" rel="noopener" class="btn-primary">
+          🌐 Visit TEF Official Website
+        </a>
+        <a href="https://www.youtube.com/watch?v=WlWjHNccdNM" target="_blank" rel="noopener" class="btn-outline">
+          ▶ Fund Manager Video (YouTube)
+        </a>
+        <a href="https://groww.in/mutual-funds/tata-ethical-fund-direct-growth" target="_blank" rel="noopener" class="btn-ghost">
+          📊 View NAV &amp; Returns on Groww →
+        </a>
+      </div>
+    </div>
+
+    <!-- QUICK STATS TABLE -->
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Detail</th>
+          <th>Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Fund House</td><td>Tata Asset Management (Tata Mutual Fund)</td></tr>
+        <tr><td>Fund Type</td><td>Open-Ended Equity — Thematic (Shariah)</td></tr>
+        <tr><td>Launched</td><td class="val-gold">1996 (30 years of track record)</td></tr>
+        <tr><td>Benchmark</td><td>NIFTY 500 Shariah Total Return Index (TRI)</td></tr>
+        <tr><td>CAGR Since Inception</td><td class="val-green">~15.2%</td></tr>
+        <tr><td>Minimum SIP</td><td class="val-green">₹100 per month</td></tr>
+        <tr><td>Minimum Lumpsum</td><td>₹5,000</td></tr>
+        <tr><td>Exit Load</td><td>0.50% if redeemed within 90 days</td></tr>
+        <tr><td>Risk Level</td><td>Very High (Equity Fund — for long-term investors)</td></tr>
+        <tr><td>Shariah Advisor</td><td>Independent certified Shariah Advisor</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 4: OTHER FUNDS -->
+  <div class="section" id="other-funds">
+    <div class="section-label">Section 04 · Other Shariah Funds</div>
+    <h2>Other Ethical Mutual Funds in India</h2>
+    <p>
+      Several other Asset Management Companies (AMCs) in India also offer Shariah-screened
+      mutual fund products. Each has a different structure, management style, or benchmark —
+      worth comparing before you decide.
+    </p>
+
+    <div class="other-funds-grid">
+
+      <!-- TAURUS -->
+      <div class="fund-card">
+        <div class="fund-logo-area">
+          <div class="fund-icon">🏛️</div>
+          <div>
+            <div class="fund-name">Taurus Ethical Fund</div>
+            <div class="fund-type-tag">Active · Equity</div>
+          </div>
+        </div>
+        <p class="fund-desc">
+          An actively managed, open-ended Shariah-compliant equity fund offered by Taurus Mutual Fund.
+          It invests in a diversified portfolio of Indian equities screened for compliance with Islamic
+          investment principles, avoiding interest-based income and prohibited sectors.
+        </p>
+        <div class="fund-meta">
+          <span class="meta-chip">Open-Ended</span>
+          <span class="meta-chip">Active Management</span>
+          <span class="meta-chip">Equity</span>
+        </div>
+        <a href="https://www.taurusmf.com/ethical-fund" target="_blank" rel="noopener" class="fund-link">
+          Visit Taurus MF →
+        </a>
+      </div>
+
+      <!-- QUANTUM -->
+      <div class="fund-card">
+        <div class="fund-logo-area">
+          <div class="fund-icon">⚛️</div>
+          <div>
+            <div class="fund-name">Quantum Ethical Fund</div>
+            <div class="fund-type-tag">Active · Equity</div>
+          </div>
+        </div>
+        <p class="fund-desc">
+          Offered by Quantum Mutual Fund — a fund house known for its transparency, low-cost philosophy,
+          and direct-to-investor model. The Quantum Ethical Fund invests in Shariah-compliant Indian
+          equities and is suited for investors who prefer a lean, no-commission approach to ethical investing.
+        </p>
+        <div class="fund-meta">
+          <span class="meta-chip">Direct-to-Investor</span>
+          <span class="meta-chip">Low Cost</span>
+          <span class="meta-chip">Equity</span>
+        </div>
+        <a href="https://www.quantumamc.com/quantum-ethical-fund" target="_blank" rel="noopener" class="fund-link">
+          Visit Quantum AMC →
+        </a>
+      </div>
+
+      <!-- UTI NIFTY SHARIAH -->
+      <div class="fund-card">
+        <div class="fund-logo-area">
+          <div class="fund-icon">📊</div>
+          <div>
+            <div class="fund-name">UTI Nifty Shariah Index Fund</div>
+            <div class="fund-type-tag">Passive · Index</div>
+          </div>
+        </div>
+        <p class="fund-desc">
+          A passive index fund that tracks the NIFTY 500 Shariah Index — a ready-made Shariah-screened
+          universe of Indian companies. Because it follows the index mechanically, the expense ratio is
+          lower than active funds. A good starting point for beginners who prefer simplicity over
+          stock-picking risk.
+        </p>
+        <div class="fund-meta">
+          <span class="meta-chip">Index Fund</span>
+          <span class="meta-chip">Low Expense</span>
+          <span class="meta-chip">NIFTY 500 Shariah</span>
+        </div>
+        <a href="https://www.utimf.com/funds/uti-nifty500-shariah-index-fund" target="_blank" rel="noopener" class="fund-link">
+          Visit UTI Mutual Fund →
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 5: COMPARE AT A GLANCE -->
+  <div class="section" id="compare">
+    <div class="section-label">Section 05 · Quick Comparison</div>
+    <h2>All Four Funds at a Glance</h2>
+    <p>Use this table to understand the key differences before you research further. All four funds are Shariah-compliant — the right choice depends on your preference for active vs passive management, fund house trust, and cost.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Fund</th>
+          <th>Type</th>
+          <th>Management</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tata Ethical Fund</td>
+          <td>Equity Thematic</td>
+          <td>Active</td>
+          <td class="val-gold">Longest track record · Most established</td>
+        </tr>
+        <tr>
+          <td>Taurus Ethical Fund</td>
+          <td>Equity Thematic</td>
+          <td>Active</td>
+          <td>Alternate active option with different portfolio mix</td>
+        </tr>
+        <tr>
+          <td>Quantum Ethical Fund</td>
+          <td>Equity Thematic</td>
+          <td>Active</td>
+          <td>Investors who prefer direct, low-cost, transparent AMC</td>
+        </tr>
+        <tr>
+          <td>UTI Nifty Shariah Index Fund</td>
+          <td>Index Fund</td>
+          <td>Passive</td>
+          <td class="val-green">Beginners · Lowest cost · Broad market exposure</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 6: HOW NRIs CAN INVEST -->
+  <div class="section" id="how-to-invest">
+    <div class="section-label">Section 06 · Getting Started</div>
+    <h2>How to Invest from the Gulf (UAE, KSA, Kuwait, Qatar…)</h2>
+    <p>
+      As an NRI (Non-Resident Indian), you are permitted to invest in Indian mutual funds — but
+      there are a few steps you need to complete first. Here is a simplified roadmap:
+    </p>
+
+    <div class="nri-steps">
+      <div class="nri-step-card">
+        <div class="nri-step-num">01</div>
+        <h3>Get an NRE or NRO Bank Account</h3>
+        <p>You need an NRE (repatriable) or NRO (non-repatriable) bank account with an Indian bank. This is the source of your investment funds.</p>
+      </div>
+      <div class="nri-step-card">
+        <div class="nri-step-num">02</div>
+        <h3>Complete KYC</h3>
+        <p>Indian mutual fund regulations require KYC (Know Your Customer) verification. This can often be done online using your Indian passport, PAN card, and address proof.</p>
+      </div>
+      <div class="nri-step-card">
+        <div class="nri-step-num">03</div>
+        <h3>Choose Your Platform</h3>
+        <p>You can invest directly through the fund house's website (e.g., tatamutualfund.com), or via platforms like Groww, CAMS, or MF Central which support NRI accounts.</p>
+      </div>
+      <div class="nri-step-card">
+        <div class="nri-step-num">04</div>
+        <h3>Start Your SIP</h3>
+        <p>Set up a Systematic Investment Plan (SIP) — even ₹500–₹1,000/month is a meaningful start. Consistency over time is more important than the amount.</p>
+      </div>
+      <div class="nri-step-card">
+        <div class="nri-step-num">05</div>
+        <h3>Monitor &amp; Hold Long-Term</h3>
+        <p>Equity mutual funds work best over 5–10+ years. Review your portfolio once or twice a year — avoid reacting to short-term market moves.</p>
+      </div>
+      <div class="nri-step-card">
+        <div class="nri-step-num">06</div>
+        <h3>Note: USA/Canada Residents</h3>
+        <p>NRIs resident in the USA or Canada face additional FATCA restrictions and many Indian AMCs do not accept investments from those countries. Gulf-based NRIs generally face no such restriction.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <div class="disclaimer-box">
+      <strong>⚠️ Disclaimer &amp; Important Note</strong>
+      This page is for educational and informational purposes only. It does not constitute financial,
+      legal, or religious (Shariah) advice. Mutual fund investments are subject to market risks — please
+      read all scheme-related documents carefully before investing. Past performance is not indicative
+      of future returns. NRI investors should consult a qualified financial advisor and verify the latest
+      tax and compliance requirements applicable to their country of residence. Links to external websites
+      are provided for convenience and we are not responsible for their content.
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Ethical Investing in India · Built for Gulf-based NRI Investors</p>
+    <a href="index.html">← Back to Main Page</a>
+  </footer>
+
+</body>
+</html>
